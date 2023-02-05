@@ -511,17 +511,17 @@ namespace Microsoft
                 return L"std::vector<BYTE>";
             }
 
-            template<>
-            inline std::wstring ToString<unsigned short>(unsigned short const& value)
-            {
-                wchar_t buf[256];
-                ThrowIfFailed(StringCchPrintf(
-                    buf,
-                    _countof(buf),
-                    L"{%hu}", 
-                    value));
-                return buf;
-            }
+            //template<>
+            //inline std::wstring ToString<unsigned short>(unsigned short const& value)
+            //{
+            //    wchar_t buf[256];
+            //    ThrowIfFailed(StringCchPrintf(
+            //        buf,
+            //        _countof(buf),
+            //        L"{%hu}", 
+            //        value));
+            //    return buf;
+            //}
 
             ENUM_TO_STRING(CanvasCapStyle)
             {
